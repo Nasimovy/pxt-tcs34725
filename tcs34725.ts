@@ -154,7 +154,7 @@ namespace TCS34725 {
         let device_id = RegisterHelper.readRegister8(TCS34725_I2C_ADDRESS, TCS34725_REGISTER_COMMAND | TCS34725_REGISTER_ID)
 
         //Check that device Identification has one of 2 i2c addresses         
-        if ((device_id != 0x44) && (device_id != 0x10)) {
+        if ((device_id != 0x44) && (device_id != 0x10) && (device_id != 0x4D)) {
             isConnected = false;
         }
         else
